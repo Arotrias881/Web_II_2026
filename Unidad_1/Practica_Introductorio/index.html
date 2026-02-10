@@ -1,11 +1,353 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda Cute | Gael Carvajal</title>
+    <link rel="stylesheet" href="style_css/style.css" />
+  </head>
+
+  <body>
+    <!-- Burbujas decorativas -->
+    <div class="bubbles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- NAV -->
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="#inicio">
+          <span class="logo" aria-hidden="true">♡</span>
+          <div class="brand-text">
+            <strong>Sweet Shop</strong>
+            <span>por <b>Gael Carvajal</b></span>
+          </div>
+        </a>
+
+        <nav class="links">
+          <a href="#productos">Productos</a>
+          <a href="#promos">Promos</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="icon-btn"
+            id="themeBtn"
+            aria-label="Cambiar tema"
+            title="Cambiar tema"
+          >
+            🌙
+          </button>
+          <button
+            class="icon-btn"
+            id="menuBtn"
+            aria-label="Abrir menú"
+            title="Menú"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <div class="container mobile-menu" id="mobileMenu" hidden>
+        <a href="#productos">Productos</a>
+        <a href="#promos">Promos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </header>
+
+    <main class="container" id="inicio">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-left reveal">
+          <div class="badge">
+            ✨ Tienda cute • Entregas rápidas • Calidad top
+          </div>
+          <h1>Bienvenid@ a <span class="grad">Sweet Shop</span></h1>
+          <p class="subtitle">
+            Una tienda con vibes suaves, productos lindos y ofertas que te
+            alegran el día.
+            <br />
+            <span class="muted">Creado por Gael Carvajal.</span>
+          </p>
+
+          <div class="cta">
+            <a class="btn primary pop" href="#productos">Ver productos</a>
+            <a class="btn candy pop" href="#promos">Ver promos</a>
+            <button class="btn ghost pop" id="toastBtn" type="button">
+              Sorpresa 🎁
+            </button>
+            <a class="btn outline pop" href="#contacto">Contactar</a>
+          </div>
+
+          <div class="chips">
+            <span class="chip">🎀 Cute UI</span>
+            <span class="chip">⚡ Animaciones</span>
+            <span class="chip">📱 Responsive</span>
+            <span class="chip">🛒 Tienda</span>
+          </div>
+        </div>
+
+        <aside class="hero-right reveal">
+          <div class="hero-card">
+            <div class="mini">
+              <div class="mini-dot"></div>
+              <div class="mini-dot"></div>
+              <div class="mini-dot"></div>
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <p class="muted">⭐ Valoración</p>
+                <p class="big">4.9/5</p>
+              </div>
+              <div class="stat">
+                <p class="muted">🚚 Envíos</p>
+                <p class="big">24h</p>
+              </div>
+              <div class="stat">
+                <p class="muted">🧁 Productos</p>
+                <p class="big" id="countCards">6</p>
+              </div>
+              <div class="stat">
+                <p class="muted">💗 Atención</p>
+                <p class="big">Premium</p>
+              </div>
+            </div>
+
+            <div class="glow" aria-hidden="true"></div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- PRODUCTOS -->
+      <section id="productos" class="section">
+        <div class="section-head reveal">
+          <h2>Productos destacados</h2>
+          <p class="muted">
+            Cards con animación + botones. Cambia nombres/precios cuando
+            quieras.
+          </p>
+        </div>
+
+        <div class="grid products">
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="pill">Nuevo</span>
+              <span class="price">Bs 25</span>
+            </div>
+            <h3>Sticker Pack Kawaii</h3>
+            <p class="muted">
+              Stickers resistentes y súper lindos para cuadernos y laptop.
+            </p>
+            <div class="card-actions">
+              <button class="btn sm primary addBtn" type="button">
+                Añadir
+              </button>
+              <button class="btn sm ghost pop" type="button">Ver</button>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="pill">Top</span>
+              <span class="price">Bs 35</span>
+            </div>
+            <h3>Libreta Pastel</h3>
+            <p class="muted">
+              Papel suave, portada cute y perfecta para apuntes.
+            </p>
+            <div class="card-actions">
+              <button class="btn sm primary addBtn" type="button">
+                Añadir
+              </button>
+              <button class="btn sm ghost pop" type="button">Ver</button>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="pill">Oferta</span>
+              <span class="price">Bs 19</span>
+            </div>
+            <h3>Lapicero Gel</h3>
+            <p class="muted">
+              Tinta fluida, colores bonitos y escritura limpia.
+            </p>
+            <div class="card-actions">
+              <button class="btn sm primary addBtn" type="button">
+                Añadir
+              </button>
+              <button class="btn sm ghost pop" type="button">Ver</button>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="pill">Cute</span>
+              <span class="price">Bs 29</span>
+            </div>
+            <h3>Llavero Plush</h3>
+            <p class="muted">Suavecito, liviano y perfecto para mochila.</p>
+            <div class="card-actions">
+              <button class="btn sm primary addBtn" type="button">
+                Añadir
+              </button>
+              <button class="btn sm ghost pop" type="button">Ver</button>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="pill">Limited</span>
+              <span class="price">Bs 49</span>
+            </div>
+            <h3>Kit Regalo</h3>
+            <p class="muted">Caja bonita + mix de detallitos para regalar.</p>
+            <div class="card-actions">
+              <button class="btn sm primary addBtn" type="button">
+                Añadir
+              </button>
+              <button class="btn sm ghost pop" type="button">Ver</button>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-top">
+              <span class="pill">Best</span>
+              <span class="price">Bs 15</span>
+            </div>
+            <h3>Mini Pins</h3>
+            <p class="muted">Pines lindos para chaquetas y mochilas.</p>
+            <div class="card-actions">
+              <button class="btn sm primary addBtn" type="button">
+                Añadir
+              </button>
+              <button class="btn sm ghost pop" type="button">Ver</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROMOS -->
+      <section id="promos" class="section">
+        <div class="promo reveal">
+          <div>
+            <h2>Promos de temporada 🍓</h2>
+            <p class="muted">
+              Compra 2 y el 3ro con <b>30% OFF</b>. Envíos en la ciudad.
+            </p>
+            <div class="promo-actions">
+              <button class="btn primary pop" id="promoBtn" type="button">
+                Aplicar promo
+              </button>
+              <a class="btn ghost pop" href="#contacto">Pedir por WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="promo-badge">
+            <p class="muted">Tu carrito</p>
+            <p class="big"><span id="cartCount">0</span> items</p>
+            <p class="muted tiny">Botones con animación ✨</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERÍA (2 fotos) -->
+      <section id="galeria" class="section">
+        <div class="section-head reveal">
+          <h2>Galería (2 fotos)</h2>
+          <p class="muted">
+            Pon tus imágenes en <span class="mono">img/foto1.jpg</span> y
+            <span class="mono">img/foto2.jpg</span>.
+          </p>
+        </div>
+
+        <div class="grid gallery">
+          <figure class="photo reveal">
+            <img src="imagenes/img 1.png" alt="Foto 1 de la tienda" />
+            <figcaption>Foto 1 • Productos / ambiente</figcaption>
+          </figure>
+
+          <figure class="photo reveal">
+            <img src="imagenes/img 2.png" alt="Foto 2 de la tienda" />
+            <figcaption>Foto 2 • Detalles / promo</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="section">
+        <div class="section-head reveal">
+          <h2>Contacto</h2>
+          <p class="muted">Formulario</p>
+        </div>
+
+        <div class="grid contact">
+          <form class="panel reveal" id="contactForm">
+            <label>
+              Nombre
+              <input id="name" type="text" required placeholder="Tu nombre" />
+            </label>
+
+            <label>
+              Correo
+              <input
+                id="email"
+                type="email"
+                required
+                placeholder="tucorreo@gmail.com"
+              />
+            </label>
+
+            <label>
+              Mensaje
+              <textarea
+                id="message"
+                required
+                placeholder="Quiero hacer un pedido de..."
+              ></textarea>
+            </label>
+
+            <button class="btn primary pop" type="submit">Enviar</button>
+            <p class="muted tiny">
+              Cambia el email/WhatsApp en <span class="mono">js/main.js</span>.
+            </p>
+          </form>
+
+          <div class="panel reveal">
+            <h3>Botones rápidos</h3>
+            <p class="muted">Encuentranos en este Link</p>
+
+            <div class="quick">
+              <a class="btn candy pop" href="#" target="_blank" rel="noreferrer"
+                >Instagram ✿</a
+              >
+              <a class="btn ghost pop" href="#" target="_blank" rel="noreferrer"
+                >TikTok ♡</a
+              >
+              <a
+                class="btn outline pop"
+                id="waBtn"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                >WhatsApp 💬</a
+              >
+            </div>
+
+            <div class="divider"></div>
+            <p class="muted">© <span id="year"></span> Gael Carvajal</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="toast" id="toast" hidden>✨ Agregado al carrito 💗</div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
