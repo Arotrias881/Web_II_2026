@@ -1,3 +1,3 @@
-const binario = "101010";
-const decimal = parseInt(binario, 2);
-console.log(decimal);
+const decimal = 42; 
+const binario = decimal.toString(2); 
+console.log(binario); 

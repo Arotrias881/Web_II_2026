@@ -1,13 +1,8 @@
-const contarParesImparesFlecha = (array) => {
-    let pares = 0;
-    let impares = 0;
-
-    array.forEach(num => {
-        num % 2 === 0 ? pares++ : impares++;
-    });
-
-    return { pares, impares };
-};
+const contarParesImparesFlecha = (array) =>
+  array.reduce((acc, num) => {
+    num % 2 === 0 ? acc.pares++ : acc.impares++;
+    return acc;  
+  }, { pares: 0, impares: 0 });
 
 
 let numeros2 = [11, 14, 17, 20, 23, 26];

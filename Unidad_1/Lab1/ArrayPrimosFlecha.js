@@ -1,19 +1,5 @@
-const soloPrimosFlecha = (array) => {
+const soloPrimosFlecha = (array) =>
+  array.filter(num => num > 1 && ![...Array(Math.floor(Math.sqrt(num)) + 1)].some((_, i) => i > 1 && num % i === 0));
 
-  const esPrimo = (num) => {
-    if (num <= 1) return false;
-
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-      if (num % i === 0) return false;
-    }
-
-    return true;
-  };
-
-  return array.filter(num => esPrimo(num));
-};
-
-
-let numeros = [1,2,3,4,5,6,7,8,9,10,11,12,13];
-
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 console.log("Flecha:", soloPrimosFlecha(numeros));
