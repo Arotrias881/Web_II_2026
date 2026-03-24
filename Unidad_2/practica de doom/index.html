@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Estudiantes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Registro de Estudiantes</h1>
+
+    <form id="form">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="curso" placeholder="Curso" required>
+        <input type="number" id="edad" placeholder="Edad" required>
+        <input type="number" id="hermanos" placeholder="Cantidad de hermanos" required>
+        <input type="text" id="ciudad" placeholder="Ciudad de nacimiento" required>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Curso</th>
+                <th>Edad</th>
+                <th>Hermanos</th>
+                <th>Ciudad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Local Server</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Parisienne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <header>
+                <h1>CRUD Local Server</h1>
+            </header>
+
+            <div class="controls">
+                <button class="btn btn-get" onclick="getData()">Obtener Posts (GET)</button>
+            </div>
+
+            <div class="form-section">
+                <form id="postForm">
+                    <h3>Crear Post (POST)</h3>
+                    <input type="text" id="postTitulo" placeholder="Título" required>
+                    <input type="text" id="postDescripcion" placeholder="Descripción" required>
+                    <button type="submit" class="btn btn-post">Crear Post (POST)</button>
+                </form>
+
+                <form id="putForm">
+                    <h3>Actualizar Post (PUT)</h3>
+                    <input type="number" id="putId" placeholder="ID del post" required>
+                    <input type="text" id="putTitulo" placeholder="Nuevo título" required>
+                    <input type="text" id="putDescripcion" placeholder="Nueva descripción" required>
+                    <button type="submit" class="btn btn-put">Actualizar Post (PUT)</button>
+                </form>
+
+                <form id="deleteForm">
+                    <h3>Eliminar Post (DELETE)</h3>
+                    <input type="number" id="deleteId" placeholder="ID del post" required>
+                    <button type="submit" class="btn btn-delete">Eliminar Post (DELETE)</button>
+                </form>
+            </div>
+
+            <div class="results">
+                <h3>Resultados:</h3>
+                <div id="status"></div>
+                <pre id="result">RESULTADO..</pre>
+            </div>
+        </div>
+
+        <script>
+            const API_URL = "http://localhost:3001/posts";
+
+            function showResult(data, isError = false) {
+                const statusEl = document.getElementById('status');
+                const resultEl = document.getElementById('result');
+
+                if (isError) {
+                    statusEl.innerHTML = '<div class="status status-error">Error en la operación</div>';
+                    resultEl.textContent = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
+                } else {
+                    statusEl.innerHTML = '<div class="status status-success">Operación exitosa</div>';
+                    resultEl.textContent = JSON.stringify(data, null, 2);
+                }
+            }
+        </script>
+
+        <script src="js/get.js"></script>
+        <script src="js/post.js"></script>
+        <script src="js/put.js"></script>
+        <script src="js/delete.js"></script>
+    </main>
+</body>
+</html>
